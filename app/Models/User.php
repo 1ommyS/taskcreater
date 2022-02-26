@@ -1,42 +1,1 @@
-<?php
-
-namespace App\Models;
-
-use Laravel\Sanctum\HasApiTokens;
-use App\Models\Scopes\Searchable;
-use Laravel\Jetstream\HasProfilePhoto;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-
-class User extends Authenticatable
-{
-    use Notifiable;
-    use HasFactory;
-    use Searchable;
-    use HasApiTokens;
-    use HasProfilePhoto;
-    use TwoFactorAuthenticatable;
-
-    protected $fillable = ['name', 'email', 'password', 'role_id'];
-
-    protected $searchableFields = ['*'];
-
-    protected $hidden = ['password', 'remember_token'];
-
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
-    public function role()
-    {
-        return $this->hasOne(Role::class);
-    }
-
-    public function isSuperAdmin()
-    {
-        return in_array($this->email, config('auth.super_admins'));
-    }
-}
+<?phpnamespace App\Models;use Illuminate\Database\Eloquent\Factories\HasFactory;use Illuminate\Foundation\Auth\User as Authenticatable;use Illuminate\Notifications\Notifiable;use Illuminate\Support\Facades\DB;/** * Class User * @package App\Models * @mixin \Illuminate\Database\Query\Builder */class User extends Authenticatable{    use HasFactory, Notifiable;    protected $table = 'users';    /**     * The attributes that are mass assignable.     *     * @var array     */    protected $fillable = [        'name',        'name_parent',        'password',        'login',        'city',        'age',        'birthday',        'link_vk',        'phone_student',        "parent_vk",        'phone_parent',        'age',        "phone_teacher",        'is_active',        'sex',        'finished',        'role_id',    ];}

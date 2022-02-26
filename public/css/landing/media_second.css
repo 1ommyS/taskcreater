@@ -1,0 +1,831 @@
+.network-image {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.btn-own {
+    text-transform: none !important;
+}
+
+.introduction-block {
+    background: #fff !important;
+    margin-top: 4rem !important;
+    width: 100% !important;
+    text-align: left;
+
+    padding: 3rem 0 !important;
+}
+
+.title-content {
+    width: 850px !important;
+    height: 350px !important;
+}
+
+.lesson-time.mt-5 {
+    margin-top: 1rem !important;
+}
+
+.format {
+    margin-top: 1rem;
+}
+
+.blog-cards {
+    justify-content: space-between !important;
+}
+
+.plan-content {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+.introduction-header h1 {
+    color: #4A3D9A;
+    text-transform: none !important;
+    font-family: "Extrabold", sans-serif !important;
+    font-size: 72px;
+}
+
+.introduction-content p {
+    color: #4A3D9A;
+    padding: 0 !important;
+    width: 50%;
+    font-size: 48px;
+}
+
+
+.card-content {
+    text-align: center;
+}
+
+.card-image {
+    text-align: center;
+}
+
+.card-header-content {
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+.card-title {
+    color: white;
+    font-size: 48px !important;
+}
+
+.card-img-overlay {
+    left: 2rem !important;
+}
+
+.card-content-text p {
+    color: #4A3D9A !important;
+}
+
+.card-content-text b {
+    font-weight: 680;
+    color: #4A3D9A;
+}
+
+.card-content-text {
+    max-width: 75%;
+}
+
+
+.similar_posts_header {
+    font-size: 48px !important;
+    color: #4A3D9A !important;
+    font-family: "Extrabold", sans-serif !important;
+    text-transform: none !important;
+}
+
+.similar_posts_title {
+    margin-top: 2rem;
+}
+
+.card {
+    max-width: 540px !important;
+    width: 100% !important;
+    border-radius: 20px !important;
+    padding: 0 !important;
+}
+
+.stack_title, .stack_subtitle {
+    font-size: 48px !important;
+}
+
+.information-text h1 {
+    font-size: 36px !important;
+}
+
+
+.post {
+    max-width: 1656px !important;
+    /*margin-left: 2rem;*/
+    /*height: auto;*/
+    max-height: 1548px !important;
+    /*width: 100%;*/
+}
+
+.post img {
+    height: 500px !important;
+}
+
+.learning_plan p.main {
+    padding: 20px 30px !important;
+}
+
+.card-text {
+    font-size: 24px !important;
+}
+
+.btn-own {
+    align-self: flex-end !important;
+}
+
+.card:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.card:not(:nth-child(2)) {
+    margin-top: 2rem;
+}
+
+.card-body {
+    text-align: left !important;
+}
+
+.card-img-top {
+    height: 441px !important;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+}
+
+
+.card-text {
+    color: #4A3D9A !important;
+
+}
+
+.big-btn {
+    padding: 20px 60px;
+    color: #FFFFFF;
+    background: #FD9207;
+    border-radius: 213px;
+    text-decoration: none;
+    font-size: 40px !important;
+    font-family: "Extrabold", sans-serif !important;
+}
+
+.btn.btn-own {
+    background: #FD9207;
+    color: white !important;
+    cursor: pointer;
+    padding: 5px 40px !important;
+    border: none;
+    border-radius: 50px;
+    font-size: 24px;
+}
+
+
+.btn.btn-own:hover {
+    color: white;
+}
+
+
+.post-page.card:nth-child(odd) {
+    /*margin-right: 50px !important;*/
+}
+
+
+.card-body p {
+    padding: 0 !important;
+}
+
+.card-img-top {
+    border: 0 !important;
+
+}
+
+.main-card {
+    /*height: 931px !important;*/
+    border: 0 !important;
+}
+
+/*.learning-time, .month_amount {*/
+/*    font-size: 36px !important;*/
+/*}*/
+
+.post {
+    /*width: 70% !important;*/
+}
+
+.contacts_title {
+    color: #FFFFFF;
+    font-family: "Extrabold", sans-serif !important;
+    font-size: 36px !important;
+    margin-bottom: 1rem;
+}
+
+.stack_subtitle {
+    font-weight: 200 !important;
+}
+
+.post {
+    width: 100% !important;
+}
+
+.card-img-top {
+    height: 20rem !important;
+
+}
+
+.information-text {
+    font-size: 52px !important;
+    width: 70% !important;
+}
+
+
+.information-lessons, .learning-time, .month_amount, .programm-link, .homework-bonus, .homework-bonus-bold, .lesson-time {
+    font-size: 24px !important;
+}
+
+.lesson-time, .format_lessons_title {
+    font-size: 24px !important;
+}
+
+.price {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+
+.network-card_link {
+    display: inline-block !important;
+    font-weight: 200;
+    padding-left: 20px;
+    color: #FFFFFF;
+}
+
+.network-card_link h1 {
+    font-family: "light", sans-serif !important;
+    font-size: 24px !important;
+
+}
+
+@media screen and (max-width: 840px) {
+}
+
+@media screen and (max-width: 1650px) {
+    .similar_posts.row.blog-cards {
+        justify-content: center;
+    }
+
+    .row.mw-block.plan-content {
+        margin-left: 5rem !important;
+    }
+
+    .card:nth-child(odd) {
+        /*margin-right: 50px !important;*/
+    }
+
+    .blog-cards {
+        justify-content: space-between !important;
+    }
+
+
+}
+
+@media screen and (max-width: 1340px) {
+
+
+    .subblock p {
+        font-size: 30px !important;
+    }
+
+    .network-card_link h1 {
+        font-family: "light", sans-serif !important;
+        font-size: 30px !important;
+    }
+
+
+    .network-image {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+}
+
+@media screen and (max-width: 1450px) {
+
+    .card:nth-child(odd) {
+        /*margin-right: 30px !important;*/
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .big-btn, .btn-own {
+        white-space: nowrap;
+    }
+
+
+    /*.blog.card {*/
+    /*    margin-right: auto !important;*/
+    /*    margin-left: auto !important;*/
+    /*}*/
+    .network-card_link {
+        width: auto !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .stack_title {
+        font-size: 50px !important;
+    }
+
+
+    .card.blog {
+        width: 400px !important;
+
+    }
+
+    .similar-posts > .card {
+        max-width: 430px !important;
+    }
+
+    .card-img-top {
+        height: 15rem !important;
+    }
+
+    .card-title {
+        font-size: 40px !important;
+    }
+
+    .similar_posts_header h2 {
+        font-size: 40px !important;
+    }
+
+    .similar_posts > .post-page.card {
+        width: 410px !important;
+    }
+
+    .introduction-header h1 {
+        font-size: 60px !important;
+    }
+
+    .introduction-content p {
+        font-size: 40px !important;
+        width: 75% !important;
+    }
+
+    .btn.btn-own {
+        font-size: 21px !important;
+    }
+
+    .lesson-time, .format_lessons_title {
+        font-size: 21px !important;
+    }
+
+    .subblock p {
+        font-size: 21px !important;
+    }
+
+    .stack_subtitle {
+        font-size: 40px !important;
+    }
+
+    .information-text {
+        width: 100% !important;
+    }
+
+    .card-title, .similar_posts_header {
+        font-size: 40px !important;
+    }
+
+    .card-text {
+        font-size: 21px !important;
+    }
+
+    .network-card_link h1 {
+        font-family: "light", sans-serif !important;
+        font-size: 20px !important;
+    }
+
+    .learning-time, .month_amount {
+        font-size: 36px !important;
+    }
+
+
+    .information-text h1 {
+        font-size: 40px !important;
+    }
+
+    .title-content {
+        width: 900px !important;
+        height: 270px !important;
+    }
+
+    .contacts_title {
+        font-size: 35px !important;
+    }
+
+    .more_information_image {
+        width: 150px !important;
+        height: 120px !important;
+    }
+
+    .information-lessons, .learning-time, .month_amount, .programm-link, .homework-bonus, .homework-bonus-bold, .lesson-time {
+        font-size: 21px !important;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .post-page.card:nth-child(odd) {
+        margin-right: 0px !important;
+        margin-left: 0 !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .format-space-between {
+        flex-direction: row !important;
+    }
+
+    .card-title, .similar_posts_header h2 {
+        font-size: 32px !important;
+    }
+
+
+    .introduction-header h1 {
+        font-size: 48px !important;
+    }
+
+    .introduction-content p {
+        font-size: 32px !important;
+        width: 75% !important;
+    }
+
+
+    .btn.btn-own {
+        font-size: 18px !important;
+    }
+
+    .row.marker {
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+
+    .card-title {
+        font-size: 30px !important;
+    }
+
+    .card-body > p.card-text {
+        font-size: 18px !important;
+    }
+
+    .format-space-between > .col-lg-4 {
+        width: 35.3% !important;
+    }
+
+    .format-space-between > .col-1 {
+        width: 16.6% !important;
+    }
+
+    .btn-own {
+        font-size: 28px !important;
+    }
+
+    .big-btn {
+        font-size: 32px !important;
+    }
+
+    .stack_title {
+        font-size: 48px !important;
+    }
+
+    .stack_subtitle {
+        font-size: 42px !important;
+    }
+
+    .links {
+        flex-direction: row !important;
+    }
+
+    .contacts_title {
+        font-size: 28px !important;
+    }
+
+    .network-image {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .network-card_link h1 {
+        font-family: "light", sans-serif !important;
+        font-size: 18px !important;
+    }
+
+
+    .lesson-time.mt-5 {
+        margin-top: 1rem !important;
+    }
+
+    .information-lessons, .learning-time, .month_amount, .programm-link, .homework-bonus, .homework-bonus-bold, .lesson-time {
+        font-size: 18px !important;
+    }
+
+    .title-content {
+        height: 280px !important;
+        width: 750px !important;
+    }
+
+    .more_information_image {
+        width: 170px !important;
+        height: 140px !important;
+    }
+
+    .lesson-time, .lesson-time, .format_lessons_title {
+        font-size: 18px !important;
+    }
+
+    .information-text h1 {
+        font-size: 32px !important;
+    }
+
+    .information-text {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 940px) {
+
+
+    /*.card:nth-child(odd) {*/
+    /*    margin-right: auto !important;*/
+    /*}*/
+    .similar_posts_title {
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 1rem !important;
+        width: 100% !important;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .introduction-header h1 {
+        font-size: 36px !important;
+    }
+
+    .card-title, .similar_posts_header h2 {
+        font-size: 24px !important;
+    }
+
+
+    .introduction-header h1 {
+        font-size: 36px !important;
+    }
+
+    .introduction-content p {
+        font-size: 24px !important;
+        width: 75% !important;
+    }
+
+
+    .btn.btn-own {
+        font-size: 15px !important;
+    }
+
+
+    .post img {
+        height: 650px !important;
+    }
+
+    .learning_plan p.card-text, .lesson-time, .format_lessons_title {
+        font-size: 15px !important;
+    }
+
+    .card-title {
+        font-size: 18px !important;
+    }
+
+    .introduction-content p {
+        font-size: 30px !important;
+        width: auto;
+    }
+
+
+    .title-content {
+        width: 500px !important;
+        height: 240px !important;
+    }
+
+    .information-lessons {
+        font-size: 30px !important;
+    }
+
+    .network-card_link {
+        width: auto !important;
+        padding-left: 7px !important;
+    }
+
+    .btn-own {
+        font-size: 24px !important;
+    }
+
+    .big-btn {
+        font-size: 24px !important;
+    }
+
+    .stack_title {
+        font-size: 36px !important;
+    }
+
+    .stack_subtitle {
+        font-size: 28px !important;
+    }
+
+    .more_information_image {
+        width: 130px !important;
+        height: 110px !important;
+    }
+
+    .contacts_title {
+        font-size: 28px !important;
+    }
+
+
+    .network-card_link h1 {
+        font-family: "light", sans-serif !important;
+        font-size: 18px !important;
+    }
+
+    .information-lessons, .learning-time, .month_amount, .programm-link, .homework-bonus, .homework-bonus-bold, .lesson-time {
+        font-size: 15px !important;
+    }
+
+    .links {
+        flex-direction: column !important;
+        justify-content: left;
+    }
+
+    .network-card_link {
+        padding-left: 0 !important;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .row.blog-cards {
+        flex-direction: column;
+        justify-content: center !important;
+        /*margin: 0 auto;*/
+    }
+
+    .card:not(:nth-child(2)) {
+        margin-top: 0;
+    }
+
+    .card {
+        margin-bottom: 1rem !important;
+        /*width: 100% !important;*/
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .order-button {
+        margin-top: 3rem;
+    }
+
+    .teacher-card {
+        margin-top: 0 !important;
+    }
+
+    .card-title, .similar_posts_header h2 {
+        font-size: 18px !important;
+    }
+
+
+    .introduction-header h1 {
+        font-size: 24px !important;
+    }
+
+    .introduction-content p {
+        font-size: 18px !important;
+        width: 75% !important;
+    }
+
+    .introduction-header h1 {
+        font-size: 24px !important;
+    }
+
+
+    .btn.btn-own {
+        font-size: 12px !important;
+    }
+
+
+    .similar_posts_header {
+        font-size: 32px !important;
+    }
+
+    .card-title {
+        font-size: 18px !important;
+    }
+
+    .post img {
+        height: 300px !important;
+    }
+
+    .big-btn, .btn-own {
+        font-size: 18px !important;
+    }
+
+    .information-text h1 {
+        font-size: 18px !important;
+    }
+
+    .format_lessons_title {
+        font-size: 18px !important;
+    }
+
+    .more_information_image {
+        width: 80px !important;
+        height: 60px !important;
+    }
+
+    .title-content {
+        width: 200px !important;
+        height: 210px !important;
+    }
+
+    .network-card_link {
+        width: auto !important;
+        padding-left: 7px !important;
+    }
+
+    .information {
+        margin-top: 1rem !important;
+    }
+
+    .stack_title {
+        font-size: 24px !important;
+    }
+
+    .stack_subtitle {
+        font-size: 20px !important;
+    }
+
+    .row.body-vector.mw-block > .mt-4 {
+        margin-top: 0.5rem !important;
+    }
+
+    .contacts_title {
+        font-size: 28px !important;
+    }
+
+    .network-card_link h1 {
+        font-family: "light", sans-serif !important;
+        font-size: 15px !important;
+    }
+
+    .information-lessons, .learning-time, .month_amount, .programm-link, .homework-bonus, .homework-bonus-bold, .lesson-time, .format_lessons_title {
+        font-size: 12px !important;
+    }
+
+    .lesson-time.mt-5 {
+        margin-top: 0 !important;
+    }
+
+    .subblock {
+        padding: 1rem 1rem !important;
+    }
+
+    .subblock p {
+        font-size: 25px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .big-btn, .btn-own {
+        padding: 10px 20px !important;
+        font-size: 17px !important;
+    }
+
+    .introduction-header h1 {
+        font-size: 40px !important;
+    }
+
+    .introduction-content p {
+        font-size: 20px !important;
+        width: auto;
+    }
+
+    .network-card_link h1 {
+        font-size: 23px !important;
+    }
+}

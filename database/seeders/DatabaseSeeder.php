@@ -13,16 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Adding an admin user
-        $user = \App\Models\User::factory()
-            ->count(1)
-            ->create([
-                'email' => 'admin@admin.com',
-                'password' => \Hash::make('admin'),
-            ]);
-
-        $this->call(RoleSeeder::class);
-        $this->call(TaskSeeder::class);
-        $this->call(UserSeeder::class);
+         //\App\Models\User::factory(10)->create();
     }
 }

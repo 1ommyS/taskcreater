@@ -2,16 +2,23 @@
 
 namespace App\Models;
 
-use App\Models\Scopes\Searchable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @package App\Models
+ * @mixin \Illuminate\Database\Query\Builder
+ */
 class Task extends Model
 {
     use HasFactory;
-    use Searchable;
 
-    protected $fillable = ['question', 'answer'];
-
-    protected $searchableFields = ['*'];
+    protected $table = "tasks";
+    protected $fillable = [
+        "question",
+        "lab_id",
+        "answer",
+        "created_at",
+        "updated_at",
+    ];
 }

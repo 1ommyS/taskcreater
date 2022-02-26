@@ -1,39 +1,75 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.button {
-    @apply inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 border border-transparent rounded-md font-semibold text-xs tracking-widest transition ease-in-out duration-150 ring-gray-300;
+* {
+    transition: 0.3s all ease-in;
+    font-size: 16px;
 }
 
-.button:hover {
-    @apply bg-gray-200;
+.nav-item.nav-link {
+    font-size: 12px !important;
 }
 
-.button:active, .button:focus {
-    @apply bg-gray-300 ring;
+.dashboard__params {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.button.button-primary {
-    @apply bg-indigo-500 text-white !important;
+.btn-link {
+    text-decoration: none !important;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.button-primary:hover, .button.button-primary:active, .button.button-primary:focus {
-    @apply bg-indigo-600 !important;
+.btn-data {
+    background: linear-gradient(to bottom, #FFA632, #E8880B) !important;
+    color: white;
+    text-align-all: center;
+    border: 1px solid #F89D26;
+    border-radius: 6px;
 }
 
-.button.button-primary:disabled {
-    @apply bg-indigo-200 !important;
+select {
+    width: 100px;
+    border-color: #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align-all: center;
+    margin: 0 5px;
 }
 
-.button.button-danger {
-    @apply bg-red-500 text-white !important;
+option::after {
+    border-color: #ccc;
+    border-radius: 5px;
 }
 
-.button-danger:hover, .button.button-danger:active, .button.button-danger:focus {
-    @apply bg-red-600 !important;
+option:hover {
+    color: red;
 }
 
-.button.button-danger:disabled {
-    @apply bg-red-200 !important;
+.btn-data:hover {
+    background: linear-gradient(to bottom, #FFA632, #E8880B) !important;
+    border-color: #FFA632;
+    color: white;
+}
+
+.bg-dark {
+    background: #333 !important;
+}
+
+.active {
+    color: #FD9207 !important;
+    border-bottom: 2px solid #FD9207 !important;
+    text-shadow: 0 0 5px black;
+}
+
+.btn-link {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.nav-item.nav-link {
+    padding: 25px !important;
+}
+
+a.nav-item.nav-link:hover {
+    color: #bf6f08 !important;
 }

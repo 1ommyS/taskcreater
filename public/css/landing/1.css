@@ -1,0 +1,84 @@
+* {
+	/*font-family: 'Bebas Neue';*/
+	font-family: 'Montserrat', sans-serif;
+	/*font-weight: bold;*/
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*Header*/
+
+header {
+	padding: 20px 0 0 0;
+}
+header a, header button {
+	text-transform: uppercase;
+	font-size: 18px !important;
+	color:  black;
+	cursor: pointer;
+}
+header .nav-link {
+	margin-left: 35px;
+}
+header .login-img {
+	height: 60px;
+	transform: translateX(50px);
+	z-index: 10;
+}
+header .login-btn {
+	border: 2px solid rgb(253, 146, 7);
+	border-radius:  50px;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	padding-left:80px !important;
+	padding-right: 40px !important;
+	outline: none !important;
+}
+header .login-btn {
+	outline: none !important;
+}
+header .login-btn span {
+	font-size: 23px;
+}
+/*promo*/
+section.promo {
+padding-bottom: 20px;
+}
+
+section.promo .body-line {
+	background-image: url("/img/landing/line.png");
+	height: 5px;
+	transform: translateY(-60px);
+	z-index: -1;
+}
+section.promo .body-vector {
+	background-image: url("/img/landing/vector.png");
+	background-size: 100% 100%;
+	background-position: 0 0px;
+	padding-top: 30px;
+	z-index: 1000 ;
+}
+
+section.promo h1, section.promo h2, section.promo a  {
+	text-transform: uppercase;
+}
+section.promo .promo-list h1:first-child {
+margin-bottom: 80px;
+}
+section.promo .btn-reg {
+	background: rgb(248,157,38);
+	color: #fff;
+	padding: 10px 40px;
+	border-radius: 50px;
+	font-size: 30px;
+}
+
+.block {
+height: 550px;
+width: 100%;
+background: lightgray;
+}
+.nav-cont {
+	max-width: 100% !important;
+}
