@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Implementations;
+namespace App\Services\Interfaces;
 
 interface ITaskService
 {

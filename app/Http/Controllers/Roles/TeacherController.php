@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Roles;
 use App\Http\Controllers\Controller;
 use App\Models\Group;
 use App\Models\Notification;
+use App\Models\StudentGroups;
 use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -51,8 +52,31 @@ class TeacherController extends Controller
         return view("pages.teacher.addstudent", compact("users"));
     }
 
-    public function saveNewStudentInGroup ()
+    public function kickStudentFromGroupView (int $id)
     {
+        $ids_object = StudentGroups::query()->where("group_id", $id)->get("student_id");
+        $ids = [];
+        foreach ( $ids_object as $item ) {
+            $ids[] = $item->student_id;
+        }
+        $users = User::query()->whereIn("id", $ids)->get();
+        return view("pages.teacher.kickStudent", compact("users"));
+    }
 
+    public function saveNewStudentInGroup (Request $request, int $id)
+    {
+        foreach ( $request->logins as $student_id ) {
+            StudentGroups::query()->create(["group_id" => $id, "student_id" => $student_id]);
+        }
+        return redirect("/profile/mygroups");
+
+    }
+
+    public function kickStudentFromGroup (Request $request, int $id)
+    {
+        foreach ( $request->logins as $student_id ) {
+            StudentGroups::query()->where([["group_id", $id], ["student_id", $student_id]])->delete();
+        }
+        return redirect("/profile/mygroups");
     }
 }

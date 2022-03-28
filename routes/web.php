@@ -76,6 +76,8 @@ Route::controller(\App\Http\Controllers\Roles\TeacherController::class)->group(f
     Route::post('/profile', "createGroup");
     Route::get("/profile/mygroups", "groupsList");
     Route::get("profile/addStudent/{id}", "addStudentToGroupView")->name("teacher.group.new.student");
+    Route::get("profile/kickStudent/{id}", "kickStudentFromGroupView")->name("teacher.group.kickStudent");
+    Route::post("profile/kickStudent/{id}", "kickStudentFromGroup");
     Route::post("profile/addStudent/{id}", "saveNewStudentInGroup");
 });
 

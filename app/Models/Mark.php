@@ -5,17 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Group extends Model
+class Mark extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        "title",
-        "teacher_id",
-        "step",
-        "contact_data",
-        "information",
+        "student_id",
+        "lab_id",
+        "mark",
+        "created_at",
+        "updated_at",
     ];
-
-    public $timestamps = false;
 }

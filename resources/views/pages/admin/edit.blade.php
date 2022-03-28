@@ -26,7 +26,7 @@
 
           <small style='font-size:16px; color:#666'>Пароль:</small>
           <div class='mt-1 mb-2 wrap-input100 rs1 validate-input'>
-            <input class='input100' type='text' name='password' placeholder='Пароль' required>
+            <input class='input100' type='text' name='password' placeholder='Пароль'>
             <span class='focus-input100-1'></span>
             <span class='focus-input100-2'></span>
           </div>

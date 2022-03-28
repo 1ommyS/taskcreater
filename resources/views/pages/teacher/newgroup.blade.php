@@ -12,9 +12,7 @@
   <div class="limiter table-responsive">
     <div class="container-fluid container-login100 flex flex-col">
       <div class="wrap-login100 p-l-15 p-r-55 p-t-25 p-b-50">
-        <a href="/profile" class="btn-sm btn-orange"
-           style="color:white;border:1px solid #eee;padding-left:20px;padding-right:20px"><i class="fa fa-arrow-left" aria-hidden="true"></i>
-          Назад</a>
+
         <form class="login100-form validate-form p-l-25 p-t-45" method="POST">
           @csrf
           @include('layouts.alerts')
@@ -29,6 +27,22 @@
 
           <div class="wrap-input100 rs1 validate-input">
             <input class="input100" type="number" name="step" placeholder="Курс" min="1" required>
+            <span class="focus-input100-1"></span>
+            <span class="focus-input100-2"></span>
+          </div>
+
+          <div class="wrap-input100 rs1 validate-input">
+            Информация о курсе
+            <hr>
+            <textarea rows="8" class="input100" name="information" required></textarea>
+            <span class="focus-input100-1"></span>
+            <span class="focus-input100-2"></span>
+          </div>
+
+          <div class="wrap-input100 rs1 validate-input">
+            Контактные данные
+            <hr>
+            <textarea rows="8" class="input100" name="data_to_connect" required></textarea>
             <span class="focus-input100-1"></span>
             <span class="focus-input100-2"></span>
           </div>

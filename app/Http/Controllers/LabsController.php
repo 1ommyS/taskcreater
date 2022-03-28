@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CompletedTasks;
 use App\Models\Lab;
+use App\Models\Mark;
 use App\Models\StudentGroups;
 use App\Models\Task;
 use App\Models\User;
@@ -51,7 +52,7 @@ class LabsController extends Controller
         foreach ( $labs as $lab ) {
             $all_counts = count(CompletedTasks::query()->where("lab_id", $lab->id)->get());
             $correct_answers = count(CompletedTasks::query()->where([["is_correct", 1], ["lab_id", $lab->id], ["student_id", Auth::id()]])->get());
-            $mark = $this->getMark($correct_answers, $all_counts);
+            $mark = Mark::query()->where([["student_id", Auth::id()], ["lab_id", $lab->id]])->get();
             $marks[$lab->id] = $mark;
         }
         $labs_objects = CompletedTasks::query()->select("lab_id")->where("student_id", Auth::id())->get("lab_id");
@@ -89,6 +90,7 @@ class LabsController extends Controller
         $all_counts = count($checked_answers);
         $correct_answers = count(CompletedTasks::query()->whereIn("task_id", $keys)->where("is_correct", 1)->get());
         $mark = $this->getMark($correct_answers, $all_counts);
+        Mark::query()->create(["student_id" => Auth::id(), "lab_id" => $id, "mark" => $mark]);
         return view("pages.labs.complete", compact("tasks", "checked_answers", "lab", "mark"));
     }
 
@@ -104,7 +106,7 @@ class LabsController extends Controller
         $types = ["text", "graphic", "audio"];
         $values = [$request->word_1, $request->sentence];
         $encoding_types = [$request->encoding_type_one, $request->encoding_type_second];
-        $memory_types = [$request->memory_type_one, $request->memoty_type_second];
+        $memory_types = [$request->memory_type_one, $request->memory_type_second];
         $amount = $request->amount;
 
         $this->taskService->createTask(amount: $request->amount, lab_id: $lab_id, types: $types, encoding_types: $encoding_types, memory_types: $memory_types, values: $values);

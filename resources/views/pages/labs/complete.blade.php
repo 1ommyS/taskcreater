@@ -63,8 +63,7 @@
             @if (!isset($checked_answers))
               <input type="text" name="{{$task->id}}" class="form-control" placeholder="Ваш ответ...">
             @else
-              Ваш ответ - {{ $checked_answers[$k]->user_answer }} - {{ $checked_answers[$k]->is_correct ? "":"не" }}
-              правильный
+              Ваш ответ - {{ $checked_answers[$k]->user_answer }} - {{ $checked_answers[$k]->is_correct ? "":"не" }}правильный
             @endif
             <hr>
           </div>

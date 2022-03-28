@@ -21,7 +21,8 @@ class AdminController extends Controller
         $users = User::where("role_id", 1)->get();
         return view("pages.admin.students", compact("users"));
     }
-public function teachersView (Request $request)
+
+    public function teachersView (Request $request)
     {
         $users = User::where("role_id", 2)->get();
         return view("pages.admin.teachers", compact("users"));
@@ -45,7 +46,8 @@ public function teachersView (Request $request)
     {
         $user = User::find($id);
         $user->name = $request->name;
-        $user->password = hash("sha3-256", $request->password);
+        if ( isset($request->password) )
+            $user->password = hash("sha3-256", $request->password);
         $user->email = $request->email;
         $user->save();
         session()->flash("success", "Данные успешно обновлены");

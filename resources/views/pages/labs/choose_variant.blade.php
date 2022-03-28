@@ -8,6 +8,10 @@
       .card {
           margin-bottom: 2rem;
       }
+
+      li {
+          list-style-type: decimal !important;;
+      }
   </style>
   <link rel="stylesheet" href="{{ asset('css/forms.css') }}">
   <link rel="stylesheet" href="{{ asset('css/utils.css') }}">
@@ -32,11 +36,15 @@
                          name="{{ $variants_to_accept[0]->id+$amount*($i-1) }}-{{   $variants_to_accept[0]->id+ $amount*$i }}">
               </td>
               <td>
-                @foreach($variants_to_accept as $k => $variant)
-                  @if ($k >= $amount*($i-1) and $k< ($amount*$i))
-                    <p>{{ $variant->question }}</p>
-                  @endif
-                @endforeach</td>
+                <ol>
+                  @foreach($variants_to_accept as $k => $variant)
+                    @if ($k >= $amount*($i-1) and $k< ($amount*$i))
+                      <li> {{ $variant->question }}</li>
+                    @endif
+                  @endforeach
+                </ol>
+              </td>
+
             </tr>
           @endif
         @endfor

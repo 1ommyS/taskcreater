@@ -21,20 +21,29 @@
       <tr>
         <th>Название группы</th>
         <th>Курс обучения</th>
+        <th>Информация о курсе</th>
+        <th>Контактные данные</th>
         <th>Добавление Студентов</th>
         <th>Лабораторные работы</th>
+        <th>Исключить из группы</th>
       </tr>
       </thead>
       <tbody>
       @foreach ( $groups as $group )
         <tr>
           <td>
-            <a style='color: black !important;font-weight:bold !important; text-decoration:underline; font-size:16px;'
-               href='profile/mystudents/{{$group->id}}'>{{$group -> title}}</a>
+            {{$group -> title}}
           </td>
           <td style='font-size:16px;'>
             {{$group -> step}}
           </td>
+          <td>
+            {{ $group->information }}
+          </td>
+          <td>
+            {{ $group->contact_data }}
+          </td>
+
           <td>
             <a class="btn btn-sm btn-outline-primary" href="{{ route("teacher.group.new.student", $group->id) }}">Добавить
                                                                                                                   студента</a>
@@ -42,6 +51,8 @@
           <td>
             <a class="btn btn-sm btn-outline-success" href="{{ route("teacher.labs.list", $group->id) }}">Лабораторные
                                                                                                           работы</a>
+          </td>  <td>
+            <a class="btn btn-sm btn-outline-danger" href="{{ route("teacher.group.kickStudent", $group->id) }}">Исключить студента</a>
           </td>
         </tr>
       @endforeach

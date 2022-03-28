@@ -5,6 +5,7 @@ namespace App\Services\Implementations;
 use App\Models\CompletedTasks;
 use App\Models\GroupTasks;
 use App\Models\Task;
+use App\Services\Interfaces\ITaskService;
 use Illuminate\Support\Facades\DB;
 
 class TaskService implements ITaskService
@@ -13,7 +14,6 @@ class TaskService implements ITaskService
     {
         return Task::query()->limit($count)->get();
     }
-
 
     public function createTask (int $amount, $lab_id, array $types, array $encoding_types, array $memory_types, array $values)
     {
@@ -91,18 +91,14 @@ class TaskService implements ITaskService
      * @param $lab_id
      * @return array
      */
-    private function generateFirstTypeOfTextTasks (array $memory_types, int|string $key, array $values, array $encoding_types, $lab_id): void
+    public function generateFirstTypeOfTextTasks (array $memory_types, int|string $key, array $values, array $encoding_types, $lab_id): void
     {
         $question = "Сколько {$memory_types[$key]} займет слово(предложение) \"{$values[$key]}\" в кодировке {$encoding_types[$key]}";
         $weight = 0;
         switch ( $encoding_types[$key] ) {
-            case "ASCII":
-                $weight = 8;
-                break;
-            case "UTF-8":
-                $weight = 8;
-                break;
             case "КОИ8":
+            case "UTF-8":
+            case "ASCII":
                 $weight = 8;
                 break;
             case "UTF-16":
@@ -112,7 +108,7 @@ class TaskService implements ITaskService
                 $weight = 32;
                 break;
         }
-        $word_weight = strlen($values[$key]) * $weight;
+        $word_weight = mb_strlen($values[$key]) * $weight;
         $answer = 0;
         switch ( $memory_types[$key] ) {
             case "Бит":
@@ -209,7 +205,7 @@ class TaskService implements ITaskService
      * @param $lab_id
      * @return void
      */
-    private function generateSecondTypeOfGraphicTasks ($lab_id): void
+        private function generateSecondTypeOfGraphicTasks ($lab_id): void
     {
         $glub = rand(1, 50);
         $w = rand(100, 10000);
@@ -234,8 +230,8 @@ class TaskService implements ITaskService
         $length = rand(1, 30);
         $step_kodir = rand(1, 100);
         $frequency = rand(1, 500);
-        $question = "Производится {$format}канальная звукозапись с частотой дискретизации {$frequency} кГц. Запись длится {$length}, её результаты записываются в файл без сжатия данных, причём каждый сигнал кодируется минимально возможным и одинаковым количеством бит. Битовая глубина звука {$step_kodir}. Определите размер в байтах.";
-        $answer = $format * $frequency * $length * 60 * $step_kodir;
+        $question = "Производится {$format}канальная звукозапись с частотой дискретизации {$frequency} кГц. Запись длится {$length} минут, её результаты записываются в файл без сжатия данных, причём каждый сигнал кодируется минимально возможным и одинаковым количеством бит. Битовая глубина звука {$step_kodir}. Определите размер в байтах.";
+        $answer = $format * $frequency * 1000 * $length * 60 * $step_kodir / 8;
         Task::query()->create([
             "question" => $question,
             "answer" => $answer,

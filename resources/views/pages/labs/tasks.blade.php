@@ -53,13 +53,27 @@
           <tr>
             <td>{{ $lab->lab_name }}</td>
             <td>
-              @if (!in_array($lab->id, $completed_labs))
-                <a href="/tasks/solve/{{ $lab->id }}" class="btn btn-sm btn-danger">Перейти к выполнению</a>
+              <a href="/tasks/solve/{{ $lab->id }}" class="btn btn-sm btn-danger">
+                @if (!in_array($lab->id, $completed_labs))
+                  Перейти к выполнению
+                @else
+                  Пересдать
+                @endif
+              </a>
+            </td>
+            <td>
+              @if (empty($marks[$lab->id]))
+                Не выполняли работу
               @else
-                <span>Работа выполнена</span>
+                @foreach($marks[$lab->id] as $m)
+                  @if ($loop->last)
+                    {{$m->mark}}.
+                  @else
+                    {{$m->mark}},
+                  @endif
+                @endforeach
               @endif
             </td>
-            <td>{{ $marks[$lab->id] == 0 ? "Не выполняли работу" : $marks[$lab->id] }}</td>
           </tr>
         @endif
       @endforeach
